@@ -109,7 +109,7 @@ export default {
             this.alert = res.data
             this.$store.commit('getMembers')
             this.$store.commit('getLeague')
-            this.$refs.playMatch.reset()
+            this.$refs.matchForm.reset()
           })
           .catch((err) => {
             console.log(err)

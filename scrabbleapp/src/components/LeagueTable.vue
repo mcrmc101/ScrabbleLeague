@@ -45,11 +45,11 @@ export default {
           label: 'Draws',
           sortable: true,
         },
-        {
+        /*{
           key: 'matches',
           label: 'Matches',
           sortable: true,
-        },
+        },*/
       ]
     }
   }
