@@ -35,15 +35,33 @@ class ScrabbleControl extends Controller
 
         BackendMenu::setContext('Mcrmc.Scrabble', 'scrabble', 'scrabblecontrol');
     }
-
+    
+    /**
+     * getMembers
+     *
+     * @return void
+     */
     public function getMembers(){
         return Member::orderBy('id','asc')->get();
     }
-
+    
+    /**
+     * getLeague
+     *
+     * @return void
+     */
     public function getLeague(){
         return Member::where('matches_played','>=',10)->orderBy('average','desc')->get();
     }
-
+    
+    /**
+     * getSingleMember
+     * 
+     * Not Used
+     *
+     * @param  mixed $memberid
+     * @return void
+     */
     public function getSingleMember($memberid){
         return Member::find($memberid);
     }
