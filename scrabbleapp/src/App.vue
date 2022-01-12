@@ -1,17 +1,56 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <b-navbar
+      variant="dark"
+      type="dark"
+    >
+      <b-navbar-brand
+        tag="h1"
+        class="m-3"
+      >Scrabble League</b-navbar-brand>
+    </b-navbar>
+    <b-container fluid>
+      <b-row
+        align-v="center"
+        align-h="center"
+      >
+        <league-table></league-table>
+      </b-row>
+      <b-row>
+        <b-col md="6">
+          <b-card>
+            <play-match></play-match>
+          </b-card>
+        </b-col>
+        <b-col md="6">
+          <b-card>
+            <add-member></add-member>
+            <all-members></all-members>
+          </b-card>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AddMember from './components/AddMember.vue'
+import AllMembers from './components/AllMembers.vue'
+import LeagueTable from './components/LeagueTable.vue'
+import PlayMatch from './components/PlayMatch.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LeagueTable,
+    PlayMatch,
+    AddMember,
+    AllMembers,
+  },
+  created () {
+    this.$store.commit('getMembers')
+    this.$store.commit('getLeague')
   }
 }
 </script>
@@ -23,6 +62,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.sr-only {
+  display: none !important;
 }
 </style>
