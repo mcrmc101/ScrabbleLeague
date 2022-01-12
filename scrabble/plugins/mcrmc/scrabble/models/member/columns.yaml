@@ -1,0 +1,46 @@
+columns:
+    id:
+        label: id
+        type: number
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime
+    deleted_at:
+        label: deleted_at
+        type: datetime
+    name:
+        label: name
+        type: text
+    email:
+        label: email
+        type: text
+    phone:
+        label: phone
+        type: text
+    active:
+        label: active
+        type: text
+    date_joined:
+        label: date_joined
+        type: text
+    wins:
+        label: wins
+        type: number
+    losses:
+        label: losses
+        type: number
+    draws:
+        label: draws
+        type: number
+    matches_played:
+        label: matches_played
+        type: number
+    average:
+        label: average
+        type: number
+    matches:
+        label: matches
+        type: text

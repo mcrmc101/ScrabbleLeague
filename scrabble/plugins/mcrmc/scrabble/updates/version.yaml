@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table mcrmc_scrabble_members'
+    - builder_table_create_mcrmc_scrabble_members.php
+1.0.3:
+    - 'Created table mcrmc_scrabble_matches'
+    - builder_table_create_mcrmc_scrabble_matches.php

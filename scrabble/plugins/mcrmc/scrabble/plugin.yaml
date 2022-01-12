@@ -1,0 +1,6 @@
+plugin:
+    name: 'mcrmc.scrabble::lang.plugin.name'
+    description: 'mcrmc.scrabble::lang.plugin.description'
+    author: Mcrmc
+    icon: oc-icon-adjust
+    homepage: ''

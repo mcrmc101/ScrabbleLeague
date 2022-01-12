@@ -1,0 +1,5 @@
+fields:
+    player1:
+        label: player1
+        span: auto
+        type: text

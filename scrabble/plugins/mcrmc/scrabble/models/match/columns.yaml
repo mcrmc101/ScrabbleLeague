@@ -1,0 +1,25 @@
+columns:
+    id:
+        label: id
+        type: number
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime
+    deleted_at:
+        label: deleted_at
+        type: datetime
+    player1:
+        label: player1
+        type: number
+    player2:
+        label: player2
+        type: number
+    player1_score:
+        label: player1_score
+        type: number
+    player2_score:
+        label: player2_score
+        type: number
