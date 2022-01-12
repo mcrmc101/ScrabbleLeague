@@ -67,8 +67,11 @@
           </b-form-group>
         </b-col>
       </b-row>
-      <b-row>
-        <b-form-group class="m-1">
+      <b-row
+        align-v="center"
+        align-h="center"
+      >
+        <b-form-group class="m-3">
           <b-button
             type="submit"
             variant="success"
