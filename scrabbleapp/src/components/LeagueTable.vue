@@ -10,7 +10,7 @@
       sort-icon-left
       responsive="sm"
     >
-      <template #cell(average)="data">{{ data.item.average }} %</template>
+      <template #cell(average)="data">{{ data.item.average }}%</template>
     </b-table>
   </div>
 </template>
