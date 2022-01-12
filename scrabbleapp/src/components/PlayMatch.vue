@@ -93,21 +93,28 @@ export default {
   },
   methods: {
     playMatch: function () {
-      var data = {
-        'player1': this.player1,
-        'player2': this.player2,
-        'player1Score': this.score1,
-        'player2Score': this.score2,
+      if (this.player1 === this.player2) {
+        this.alert = 'Player 1 is same as Player 2'
+        return
       }
-      axios.post('https://scrabble.mcrmc.co.uk/scrabble/playMatch', data)
-        .then((res) => {
-          this.alert = res.data
-          this.$store.commit('getMembers')
-          this.$store.commit('getLeague')
-        })
-        .catch((err) => {
-          console.log(err)
-        })
+      else {
+        var data = {
+          'player1': this.player1,
+          'player2': this.player2,
+          'player1Score': this.score1,
+          'player2Score': this.score2,
+        }
+        axios.post('https://scrabble.mcrmc.co.uk/scrabble/playMatch', data)
+          .then((res) => {
+            this.alert = res.data
+            this.$store.commit('getMembers')
+            this.$store.commit('getLeague')
+            this.$refs.playMatch.reset()
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+      }
     }
   }
 
