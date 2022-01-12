@@ -9,7 +9,9 @@
       :fields="fields"
       sort-icon-left
       responsive="sm"
-    ></b-table>
+    >
+      <template #cell(average)="data">{{ data.item.average }} %</template>
+    </b-table>
   </div>
 </template>
 <script>
