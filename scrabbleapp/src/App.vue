@@ -3,6 +3,7 @@
     <b-navbar
       variant="dark"
       type="dark"
+      class="mb-3"
     >
       <b-navbar-brand
         tag="h1"
@@ -16,7 +17,7 @@
       >
         <league-table></league-table>
       </b-row>
-      <b-row>
+      <b-row class="mb-3">
         <b-col md="6">
           <b-card>
             <play-match></play-match>
