@@ -130,7 +130,8 @@ class ScrabbleControl extends Controller
             //save players
             $player1->save();
             $player2->save();
-            return response()->json('The Match is a Draw!', 200);
+            $restr = 'The Match is a Draw!';
+            return response()->json($restr, 200);
         }
         //if player 1 wins
         elseif($score1 > $score2){
@@ -157,7 +158,8 @@ class ScrabbleControl extends Controller
             //save players
             $player1->save();
             $player2->save();
-            return response()->json('Player 1 Wins!', 200);
+            $restr = $player1->name.' Wins!';
+            return response()->json($restr, 200);
         }
         //player 2 wins
         else{
@@ -184,7 +186,8 @@ class ScrabbleControl extends Controller
             //save players
             $player1->save();
             $player2->save();
-            return response()->json('Player 2 Wins!', 200);
+            $restr = $player2->name.' Wins!';
+            return response()->json($restr, 200);
         }
     }
 
