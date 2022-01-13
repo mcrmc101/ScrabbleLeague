@@ -96,7 +96,7 @@ export default {
   },
   methods: {
     playMatch: function () {
-      if (this.player1 === this.player2) {
+      if (this.player1 == this.player2) {
         this.alert = 'Player 1 is same as Player 2'
         return
       }
